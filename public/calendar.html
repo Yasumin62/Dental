@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<title>CY DENTAL | จองคิวทำฟัน</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/mobiscroll.javascript.min.css">
+
+<link  type="text/css" rel="stylesheet" href="css/home.css">
+<style type="text/css">
+  body {
+      margin: 0;
+      padding: 0;
+  }
+
+  body,
+  html {
+      height: 100%;
+  }
+
+  .md-custom-header-controls {
+      display: flex;
+      flex: 1 0 auto;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .md-custom-header-nav,
+  .md-custom-header-view {
+      width: 180px;
+  }
+  
+  .md-custom-header-button.mbsc-button {
+      font-size: 20px;
+      height: auto;
+      padding: 0;
+      margin: 0;
+  }
+  
+  .md-custom-header .mbsc-segmented {
+      width: 110px;
+      float: right;
+      margin-top: 0;
+      margin-bottom: 0;
+  }
+  
+  .md-custom-header .mbsc-material.mbsc-segmented,
+  .md-custom-header .mbsc-windows.mbsc-segmented {
+      padding: 0;
+  }
+  
+  .md-custom-header .mbsc-segmented .mbsc-segmented-button {
+      font-size: 20px;
+      height: 32px;
+      padding: 0;
+  }
+  </style>
+<body class="w3-light-grey">
+
+<!-- Top container -->
+<div class="w3-bar w3-top w3-large" style="z-index:4;  background-color: #605CA8; color: azure; height: 50px;">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i></button>
+  <span class="w3-bar-item w3-left" style="width:230px; background-color: #453F99;text-align: center;height: 50px;">CY DENTAL</span>
+  <span id="role-user" class="w3-bar-item w3-right">...</span>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-animate-left" style="z-index:3;width:230px; background-color: #222C31; color: #C1CED6;" id="mySidebar"><br>
+  
+    
+  <hr>
+  <div class="w3-bar-block">
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <!-- <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-home fa-fw"></i>  หน้าหลัก</a> -->
+    <div id="menu_user"></div>
+  </div>
+  <hr>
+  
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:230px;margin-top:43px;">
+
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:22px">
+    <h3 class="header-page"><div class="frame"><b>ปฏิทินคิวทำฟัน</b></div></h3>
+  </header>
+
+  <div class="w3-container" style="margin-top:20px;">
+    <div class="frame-container">
+      <div mbsc-page class="demo-customizing-header">
+        <div style="height:100%">
+            <div class="md-custom-header">
+              <div id="demo-custom-header"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <hr>
+
+  
+</div>
+
+<script>
+var mySidebar = document.getElementById("mySidebar");
+
+var overlayBg = document.getElementById("myOverlay");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="plugins/mobiscroll.javascript.min.js"></script>
+
+<script src = "js/header.js"></script>
+<script src = "js/calendar.js"></script>
+
+
+<script>
+
+  mobiscroll.setOptions({
+      locale: mobiscroll.localeTh,                        // Specify language like: locale: mobiscroll.localePl or omit setting to use default
+      theme: 'ios',                                       // Specify theme like: theme: 'ios' or omit setting to use default
+      themeVariant: 'light'                               // More info about themeVariant: https://docs.mobiscroll.com/5-9-1/javascript/eventcalendar#opt-themeVariant
+  });
+  
+  var currentDate = new Date(),
+      view = 'calendar',
+      calendar = mobiscroll.eventcalendar('#demo-custom-header', {
+          view: {                                         // More info about view: https://docs.mobiscroll.com/5-9-1/javascript/eventcalendar#opt-view
+              calendar: {
+                  labels: true                            // More info about labels: https://docs.mobiscroll.com/5-9-1/javascript/eventcalendar#opt-labels
+              }
+          },
+          height: 750,                                    // More info about height: https://docs.mobiscroll.com/5-9-1/javascript/eventcalendar#opt-height
+          onSelectedDateChange: function (event, inst) {  // More info about onSelectedDateChange: https://docs.mobiscroll.com/5-9-1/javascript/eventcalendar#event-onSelectedDateChange
+              currentDate = event.date;
+          },
+          renderHeader: function () {                     // More info about renderHeader: https://docs.mobiscroll.com/5-9-1/javascript/eventcalendar#opt-renderHeader
+              return '<div mbsc-calendar-nav class="md-custom-header-nav"></div>' +
+                  '<div class="md-custom-header-controls">' +
+                  '<button id="nav-to-prev-page" mbsc-button data-variant="flat" data-icon="material-arrow-back" class="md-custom-header-button"></button>' +
+                  '<div mbsc-calendar-today class="md-custom-header-today"></div>' +
+                  '<button id="nav-to-next-page" mbsc-button data-variant="flat" data-icon="material-arrow-forward" class="md-custom-header-button"></button>' +
+                  '</div>' +
+                  '<div class="md-custom-header-view">' +
+                  '<label><input data-icon="calendar" mbsc-segmented type="radio" name="view" value="calendar" class="md-view-change" checked></label>' +
+                  '<label><input data-icon="material-list" mbsc-segmented type="radio" name="view" value="schedule" class="md-view-change"></label>' +
+                  '</div>';
+          }
+      });
+  
+  // mobiscroll.util.http.getJson('https://trial.mobiscroll.com/events/?vers=5', function (events) {
+  //   console.log(events)
+  //   let calendarData = events.splice();
+  //   calendarData.push({
+  //     color: "#ff6d42",
+  //     end: "2021-09-23T17:00:00.000Z",
+  //     id: "mbsc_36",
+  //     start: "2021-09-23T17:00:00.000Z",
+  //     title: "คิวที่ 1 Coding Addict",
+  //     _days: []
+  //   })
+
+
+  //   // ajax("/getDateTimeBooking", data,
+  //   //   function(result){
+  //   //     console.log(result); 
+  //   //   }, 
+  //   //   function(err){
+  //   //     console.log(err);
+  //   //   });
+    
+  //   console.log(calendarData);
+  //   calendar.setEvents(calendarData);
+  // }, 'jsonp');
+  
+  function getFirstDayOfWeek(d, prev) {
+      var day = d.getDay(),
+          diff = d.getDate() - day + (prev ? -7 : 7);
+      return new Date(d.setDate(diff));
+  }
+  
+  function navigatePage(prev) {
+      if (view == 'calendar') {
+          var prevNextPage = new Date(currentDate.getFullYear(), currentDate.getMonth() + (prev ? -1 : 1), 1);
+          calendar.navigate(prevNextPage);
+          currentDate = prevNextPage;
+      } else {
+          var prevNextSunday = getFirstDayOfWeek(currentDate, prev);
+          calendar.navigate(prevNextSunday);
+          currentDate = prevNextSunday;
+      }
+  }
+  
+  document.querySelectorAll('.md-view-change').forEach(function (elm) {
+      elm.addEventListener('change', function (ev) {
+          switch (ev.target.value) {
+              case 'calendar':
+                  calendar.setOptions({
+                      view: {                                         // More info about view: https://docs.mobiscroll.com/5-9-1/javascript/eventcalendar#opt-view
+                          calendar: { labels: true }
+                      }
+                  });
+                  view = 'calendar';
+                  break;
+              case 'schedule':
+                  calendar.setOptions({
+                      view: {                                         // More info about view: https://docs.mobiscroll.com/5-9-1/javascript/eventcalendar#opt-view
+                          schedule: { type: 'week' }
+                      }
+                  });
+                  view = 'schedule';
+                  break;
+          }
+      });
+  });
+  
+  document
+      .getElementById('nav-to-prev-page')
+      .addEventListener('click', function () {
+          navigatePage(true);
+      });
+  
+  document
+      .getElementById('nav-to-next-page')
+      .addEventListener('click', function () {
+          navigatePage(false);
+      });
+</script>
+
+</body>
+</html>

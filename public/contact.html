@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<title>CY DENTAL | จองคิวทำฟัน</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/mobiscroll.javascript.min.css">
+
+<link  type="text/css" rel="stylesheet" href="css/home.css">
+<style type="text/css">
+  body {
+      margin: 0;
+      padding: 0;
+  }
+
+  body,
+  html {
+      height: 100%;
+  }
+
+  .md-custom-header-controls {
+      display: flex;
+      flex: 1 0 auto;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .md-custom-header-nav,
+  .md-custom-header-view {
+      width: 180px;
+  }
+  
+  .md-custom-header-button.mbsc-button {
+      font-size: 20px;
+      height: auto;
+      padding: 0;
+      margin: 0;
+  }
+  
+  .md-custom-header .mbsc-segmented {
+      width: 110px;
+      float: right;
+      margin-top: 0;
+      margin-bottom: 0;
+  }
+  
+  .md-custom-header .mbsc-material.mbsc-segmented,
+  .md-custom-header .mbsc-windows.mbsc-segmented {
+      padding: 0;
+  }
+  
+  .md-custom-header .mbsc-segmented .mbsc-segmented-button {
+      font-size: 20px;
+      height: 32px;
+      padding: 0;
+  }
+  </style>
+<body class="w3-light-grey">
+
+<!-- Top container -->
+<div class="w3-bar w3-top w3-large" style="z-index:4;  background-color: #605CA8; color: azure; height: 50px;">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i></button>
+  <span class="w3-bar-item w3-left" style="width:230px; background-color: #453F99;text-align: center;height: 50px;">CY DENTAL</span>
+  <span id="role-user" class="w3-bar-item w3-right">...</span>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-animate-left" style="z-index:3;width:230px; background-color: #222C31; color: #C1CED6;" id="mySidebar"><br>
+  
+    
+  <hr>
+  <div class="w3-bar-block">
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <!-- <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-home fa-fw"></i>  หน้าหลัก</a> -->
+    <div id="menu_user"></div>
+    <!-- <a href="/home" class="w3-bar-item w3-button w3-padding"><i class="fa fa-home fa-fw"></i>  หน้าหลัก</a>
+    <a href="/calendar" class="w3-bar-item w3-button w3-padding"><i class="fa fa-calendar fa-fw"></i>  ปฎิทินคิวทำฟัน</a>
+    <a href="/booking" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  จองคิวทำฟัน</a>
+    <a href="/edit_booking" class="w3-bar-item w3-button w3-padding"><i class="fa fa-edit fa-fw"></i>  แก้ไขตารางนัดทำฟัน</a>
+    <a href="/cancle_booking" class="w3-bar-item w3-button w3-padding"><i class="fa fa-close fa-fw" style="color: red;"></i>  ยกเลิกคิวทำฟัน</a>
+    <a href="/contact" class="w3-bar-item w3-button w3-padding"><i class="fa fa-phone fa-fw"></i>  ติดต่อ/สอบถาม</a>
+    <a id="sign-out" class="w3-bar-item w3-button w3-padding"><i class="fa fa-sign-out fa-fw" ></i>  ออกจากระบบ</a> -->
+  </div>
+  <hr>
+  
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:230px;margin-top:43px;">
+
+  <header class="w3-container" style="padding-top:22px">
+  </header>
+
+  <div class="w3-container" style="margin-top:20px;">
+    <div class="frame-container-contact">
+      <h3 class="header-page"><div class="header-contact"><b>ติดต่อ/สอบถาม</b></div></h3>
+      <h4 style="color: red;">CY DENTAL</h4>
+      <h4>เวลาเปิดทำการ 10:00 น. - 20:00 น.</h4>
+      <h4>โทร: 099-5062199</h4>
+      <h4>021-4856401</h4>
+      
+      
+    </div>
+
+  </div>
+  
+</div>
+
+<script>
+var mySidebar = document.getElementById("mySidebar");
+
+var overlayBg = document.getElementById("myOverlay");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src = "js/header.js"></script>
+<script src = "js/contact.js"></script>
+
+</body>
+</html>

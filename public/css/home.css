@@ -1,0 +1,137 @@
+body {
+    font-family: 'Kanit', sans-serif;
+  }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+  
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.header-page{
+    /* margin-left: 50%; */
+    text-align: center;
+    margin-left: 40%;
+    margin-right: 40%;
+    font-family: 'Kanit', sans-serif;
+}
+
+.header-page .frame{
+    background-color: #56baed;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.frame-container{
+    border-top: solid #0FA35A;
+    background-color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 5px;
+}
+
+.frame-container2{
+    border-top: solid #000000;
+    background-color: rgb(151, 151, 151);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 5px;
+    color:#ffffff;
+}
+
+.frame-container-contact{
+    /* border-top: solid #0FA35A; */
+    background-color: #DAECF8;
+    /* padding-left: 15px; */
+    /* padding-right: 15px; */
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+.header-page .header-contact{
+    background-color: #0CAA5E;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.frame-container-input{
+    border-top: solid #0FA35A;
+    background-color: white;
+    /* padding-left: 15px; */
+    /* padding-right: 15px; */
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 5px;
+}
+
+.btnCheck {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.btn-danger{
+    background-color: #dd4b39;
+    border-color: #d73925;
+    color: white;
+}
+
+.btn-success{
+    background-color: #1ca700;
+    border-color: #1ca700;
+    color: white;
+}
+
+.btn-unavailable{
+    background-color: #acacac;
+    border-color: #acacac;
+    color: black;
+    cursor: not-allowed;
+}
+
+.column{
+    width: 100%;
+    /* background-color: turquoise;s */
+    display:table;
+    text-align: center;
+}
+
+.column .column-item{
+    display:table-cell;
+    
+    /* display: inline; */
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CY Dental</title>
+  <link  type="text/css" rel="stylesheet" href="css/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css"> -->
+
+</head>
+<body id="bodyIndex">
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <h2 id="signIn_index" class="active"> เข้าสู่ระบบ </h2>
+    <h2 id="signUp_index" class="inactive underlineHover">สมัครสมาชิก </h2>
+
+    <div class="fadeIn first">
+      CY Dental
+    </div>
+
+    <div id="login-form">
+      <input type="text" id="username" class="fadeIn first" name="login" placeholder="ชื่อผู้ใช้">
+      <input type="password" id="password" class="fadeIn second" name="pass" placeholder="รหัสผ่าน">  
+    </div>
+
+    <div id="register-form">
+      <input type="text" id="username-reg" class="fadeIn first" placeholder="ชื่อผู้ใช้">
+      <input type="text" id="phone" class="fadeIn second" placeholder="เบอร์โทรศัพท์">
+      <input type="text" id="id_card" class="fadeIn third" placeholder="เลขบัตรประชาชน">
+      <!-- <input type="text" id="birthdate" class="fadeIn third" placeholder="วันเกิด"> -->
+      <div class="date-input-form">
+        <!-- <div>วันเกิด: </div> -->
+        <SELECT id ="day" name = "dd" class="input-date fadeIn third" ></SELECT>
+        <SELECT  id ="month" name = "mm" class="input-date fadeIn third" onchange="change_month(this)"></SELECT>
+        <SELECT id ="year" name = "yyyy" class="input-date fadeIn third" onchange="change_year(this)"></SELECT>
+      </div>
+
+
+      <input type="password" id="password-reg" class="fadeIn third" placeholder="รหัสผ่าน">
+      <input type="password" id="con-password" class="fadeIn third" placeholder="ยืนยันรหัสผ่าน">
+    </div>
+
+
+    <input id="submit-btn" type="submit" class="fadeIn fourth cursor_submit" value="เข้าสู่ระบบ">
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- <script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script> -->
+<!-- <script>
+  $(function () {
+    $('#birthdate').daterangepicker();
+  })
+</script> -->
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src = "js/header.js"></script>
+<script src = "js/index.js"></script>
+</body>
+</html>
